@@ -1,12 +1,10 @@
 namespace WebApplication.Models
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+  using System.Collections.Generic;
+  using System.ComponentModel.DataAnnotations;
+  using System.ComponentModel.DataAnnotations.Schema;
 
-    [Table("User")]
+  [Table("User")]
     public partial class User
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
