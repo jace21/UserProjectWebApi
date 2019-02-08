@@ -1,0 +1,35 @@
+﻿@section scripts {
+  @Scripts.Render("~/bundles/app")
+}
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <p>
+    <select data-bind="options: users,
+            optionsText: function(item) {
+                       return item.FirstName + ' ' + item.LastName
+            },
+            optionsCaption: '--',
+            value: selectedUser"></select>
+  </p>
+  <span style="font-size:16px" data-bind="text: selectedUser().FirstName"></span>
+  <div class="row">
+    <ul class="list-unstyled" data-bind="foreach: users">
+      <li>
+        <div class="column">
+          <div>
+            <div>
+              <label>Name:</label>
+              <span style="font-size:16px" data-bind="text: FirstName"></span>
+            </div>
+            <label>Date of Birth:</label>
+            <span data-bind="text: LastName"></span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
