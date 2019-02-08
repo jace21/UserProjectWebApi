@@ -44,12 +44,7 @@
 ko.applyBindings(new ViewModel());
 
 function formatDate(odate) {
-  var date = new Date(odate);
-  var year = date.getFullYear();
-  var options = { month: 'long' };
-  var fullMonth = new Intl.DateTimeFormat('en-US', options).format(date);
-  var day = date.getDate();
-  return fullMonth + ' ' + day + ', ' + year;
+  return moment(odate).format('MMM DD, YYYY h:mm:ss a');
 }
 
 function calcAssignedDate(start, assigned) {
@@ -58,11 +53,19 @@ function calcAssignedDate(start, assigned) {
 
   var diff = startDate - assignedDate;
 
-  if (diff < 0)
+  if (diff < 0) {
     return "Started";
+  }
   else {
     var time = new moment.duration(diff);
-    return time.asDays() + " days";
+    var str = Math.floor(time.asDays()) + " days and ";
+
+    var leftOverTime = time.asHours() % 24;
+
+    if (leftOverTime != 0) {
+      str += leftOverTime + " hours";
+    }
+    return str;
   }
 }
 
