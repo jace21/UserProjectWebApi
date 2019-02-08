@@ -1,4 +1,4 @@
-#Instructions
+# Instructions
 Navigate to the \dbscripts folder and use the 'run.bat'. A database should be installed on a local instance of SQL. Afterwards the code can be compiled.
 
 # UserProjectWebApi
