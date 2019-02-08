@@ -8,25 +8,39 @@
 
 <body>
   <p>
-    <select data-bind="options: users,
+    <div class="form-group col-lg-4 col-lg-offset-4">
+      <label>Select a User:</label>
+      <select class="form-control" data-bind="options: users,
             optionsText: function(item) {
                        return item.FirstName + ' ' + item.LastName
             },
             optionsCaption: '--',
             value: selectedUser"></select>
+    </div>
   </p>
-  <div class="row">
-    <ul class="list-unstyled" data-bind="foreach: projects">
-      <li>
-        <div class="column">
-          <div>
-            <div>
-              <label>Project ID</label>
-              <span style="font-size:16px" data-bind="text: ProjectId"></span>
-            </div>
-          </div>
-        </div>
-      </li>
-    </ul>
+  <div class="table-responsive-md">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Project Id</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">Time To Start</th>
+          <th scope="col">End Date</th>
+          <th scope="col">Credits</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody data-bind="foreach: projects">
+        <tr>
+          <!-- The table row number -->
+          <td data-bind="text: ProjectId" />
+          <td data-bind="text: Project.StartDate" />
+          <td />
+          <td data-bind="text: Project.EndDate" />
+          <td data-bind="text: Project.Credits" />
+          <td data-bind="text: IsActive" />
+        </tr>
+      </tbody>
+    </table>
   </div>
 </body>

@@ -7,7 +7,12 @@
 
   this.selectedUser.subscribe(function (latest) {
     selectedUser = latest;
-    self.projects(latest.UserProjects);
+    if (latest != null) {
+      self.projects(latest.UserProjects);
+    }
+    else {
+      self.projects(ko.observableArray());
+    }
     ko.applyBindings(self);
   }, this);
 

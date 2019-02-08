@@ -25,7 +25,8 @@ namespace WebApplication
 
       bundles.Add(new ScriptBundle("~/bundles/app").Include(
                "~/Scripts/knockout-{version}.js",
-               "~/Scripts/app.js"));
+               "~/Scripts/app.js",
+               "~/Scripts/knockout.simpleGrid.3.0.js"));
     }
   }
 }
