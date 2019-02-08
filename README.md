@@ -10,7 +10,7 @@ sqlcmd /S %COMPUTERNAME%\{SqlInstance} /i CreateDatabase.sql<br />
 4. In the Code, Navigate to the Constants and update the 'ComputerName' and 'SqlServer' constants to use the correct computer name and SQL Server instance.
 
 # UserProjectWebApi
-The User Project is a Single Page Application that uses the ASP.NET Web API to request for projects associated to the user and displays them using a bootstrap table.
+The User Project is a Single Page Application that uses the ASP.NET Web API to request for projects associated to the user and displays them using a combination of jQuery, Knockout, and Moment.Js to display values in a table.
 
 ![HomePage](/images/DefaultWebPage.PNG)
 The Default Web page does not have any users selected so no web pages are displayed in the table.
