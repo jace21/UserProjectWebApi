@@ -27,7 +27,7 @@ namespace WebApplication.Controllers
         [ResponseType(typeof(UserProject))]
         public async Task<IHttpActionResult> GetUserProject(int id)
         {
-            UserProject userProject = await db.UserProjects.FindAsync(id);
+            IQueryable<UserProject> userProject = db.UserProjects.Where(x => x.UserId == id);
             if (userProject == null)
             {
                 return NotFound();

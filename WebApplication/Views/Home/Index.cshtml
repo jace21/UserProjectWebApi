@@ -15,18 +15,15 @@
             optionsCaption: '--',
             value: selectedUser"></select>
   </p>
-  <span style="font-size:16px" data-bind="text: selectedUser().FirstName"></span>
   <div class="row">
-    <ul class="list-unstyled" data-bind="foreach: users">
+    <ul class="list-unstyled" data-bind="foreach: projects">
       <li>
         <div class="column">
           <div>
             <div>
-              <label>Name:</label>
-              <span style="font-size:16px" data-bind="text: FirstName"></span>
+              <label>Project ID</label>
+              <span style="font-size:16px" data-bind="text: ProjectId"></span>
             </div>
-            <label>Date of Birth:</label>
-            <span data-bind="text: LastName"></span>
           </div>
         </div>
       </li>

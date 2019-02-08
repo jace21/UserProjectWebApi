@@ -6,13 +6,13 @@
   self.projects = ko.observableArray();
 
   this.selectedUser.subscribe(function (latest) {
-    ajaxHelper(userProjects + latest.Id, 'GET').done(function (data) {
-      self.projects(data);
-    });
+    selectedUser = latest;
+    self.projects(latest.UserProjects);
+    ko.applyBindings(self);
   }, this);
 
   var usersUri = '/api/Users/';
-  var userProjects = '/api/UserProjects/'
+
   function ajaxHelper(uri, method, data) {
     self.error(''); // Clear error message
     return $.ajax({

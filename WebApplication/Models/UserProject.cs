@@ -19,8 +19,12 @@ namespace WebApplication.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ProjectId { get; set; }
 
+        [Key]
+        [Column(Order = 2)]
         public bool IsActive { get; set; }
 
+        [Key]
+        [Column(Order = 3)]
         public DateTime AssignedDate { get; set; }
 
         public virtual Project Project { get; set; }
