@@ -1,11 +1,17 @@
 namespace WebApplication.Models
 {
+  using System;
   using System.Data.Entity;
 
   public partial class DatabaseContext : DbContext
   {
+    private static string DbConnectString = 
+      @"data source={0}\SQLEXPRESS;initial catalog=ProductionDatabase;" + 
+      @"integrated security=True;MultipleActiveResultSets=True;App=EntityFramework";
+
+
     public DatabaseContext()
-        : base("name=DatabaseContext")
+        : base(string.Format(DbConnectString, Environment.MachineName))
     {
       Configuration.ProxyCreationEnabled = true;
       Configuration.LazyLoadingEnabled = true;

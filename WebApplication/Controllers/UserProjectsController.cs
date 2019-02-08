@@ -82,6 +82,7 @@ namespace WebApplication.Controllers
     public async Task<IHttpActionResult> GetUserProject(int id)
     {
       UserProject userProject = await db.UserProjects.FindAsync(id);
+
       if (userProject == null)
       {
         return NotFound();
@@ -206,6 +207,7 @@ namespace WebApplication.Controllers
     public async Task<IHttpActionResult> DeleteUserProject(int id)
     {
       UserProject userProject = await db.UserProjects.FindAsync(id);
+
       if (userProject == null)
       {
         return NotFound();
