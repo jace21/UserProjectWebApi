@@ -61,8 +61,8 @@ function calcAssignedDate(start, assigned) {
   if (diff < 0)
     return "Started";
   else {
-
-    return diff;
+    var time = new moment.duration(diff);
+    return time.asDays() + " days";
   }
 }
 

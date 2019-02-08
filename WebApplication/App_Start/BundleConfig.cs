@@ -1,11 +1,43 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace WebApplication
 {
+  /// <prologue>
+  ///
+  /// <file name="BundleConfig.cs"/>
+  ///
+  /// <remarks>
+  /// N/A
+  /// </remarks>
+  ///
+  /// 
+  /// <author name="Jason Truong" date="02/07/19"/>
+  /// 
+  ///
+  /// <history>
+  ///   <entry date="02/07/19" author="Jason Truong" scr="" 
+  ///          desc="Created"/> 
+  /// </history>
+  ///
+  /// </prologue>
+  /// <summary>
+  /// Contains all bundles scripts and css files.
+  /// </summary>
+  ///
+  /// <remarks>
+  /// N/A
+  /// </remarks>
   public class BundleConfig
   {
-    // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
+    #region Register
+
+    /// <summary>
+    /// Bundle Scripts and Content files for easier reference
+    /// </summary>
+    /// 
+    /// <param name="bundles">
+    /// Collection of Bundles.
+    /// </param>
     public static void RegisterBundles(BundleCollection bundles)
     {
       bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
@@ -26,7 +58,9 @@ namespace WebApplication
       bundles.Add(new ScriptBundle("~/bundles/app").Include(
                "~/Scripts/knockout-{version}.js",
                "~/Scripts/app.js",
-               "~/Scripts/knockout.simpleGrid.3.0.js"));
+               "~/Scripts/moment.min.js"));
     }
+
+    #endregion
   }
 }
