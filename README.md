@@ -1,5 +1,9 @@
 # Instructions
-Navigate to the \dbscripts folder and use the 'run.bat'. A database should be installed on a local instance of SQL. Afterwards the code can be compiled.
+1. Navigate to the \dbscripts folder and update the 'run.bat' to point to the correct machine and SQL Server instance
+  sqlcmd /S %COMPUTERNAME%\{SqlInstance} /i RemoveDatabase.sql
+  sqlcmd /S %COMPUTERNAME%\{SqlInstance} /i CreateDatabase.sql
+2. The Script installs the an new Database and Tablesee on a local isntance of SQL.
+3. In the Code, Navigate to the Constants and update the ComputerName and SqlServer constants to use the correct computer name and SQL Server instance.
 
 # UserProjectWebApi
 The User Project is a Single Page Application that uses the ASP.NET Web API to request for projects associated to the user and displays them using a bootstrap table.
