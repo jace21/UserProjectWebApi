@@ -34,11 +34,11 @@
         <tr>
           <!-- The table row number -->
           <td data-bind="text: ProjectId" />
-          <td data-bind="text: Project.StartDate" />
-          <td />
-          <td data-bind="text: Project.EndDate" />
+          <td data-bind="text: formatDate(Project.StartDate)" />
+          <td data-bind="text: calcAssignedDate(Project.StartDate, AssignedDate)"/>
+          <td data-bind="text: formatDate(Project.EndDate)" />
           <td data-bind="text: Project.Credits" />
-          <td data-bind="text: IsActive" />
+          <td data-bind="text: getActiveState(IsActive)" />
         </tr>
       </tbody>
     </table>

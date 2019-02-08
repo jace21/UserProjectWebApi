@@ -46,9 +46,31 @@ ko.applyBindings(new ViewModel());
 function formatDate(odate) {
   var date = new Date(odate);
   var year = date.getFullYear();
-  var month = date.getMonth() + 1;
   var options = { month: 'long' };
   var fullMonth = new Intl.DateTimeFormat('en-US', options).format(date);
   var day = date.getDate();
   return fullMonth + ' ' + day + ', ' + year;
+}
+
+function calcAssignedDate(start, assigned) {
+  var startDate = new Date(start);
+  var assignedDate = new Date(assigned);
+
+  var diff = startDate - assignedDate;
+
+  if (diff < 0)
+    return "Started";
+  else {
+
+    return diff;
+  }
+}
+
+function getActiveState(active) {
+  if (active) {
+    return "Active";
+  }
+  else {
+    return "Inactive";
+  }
 }
