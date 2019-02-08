@@ -1,7 +1,9 @@
 # Instructions
 1. Navigate to the \dbscripts folder and update the 'run.bat' to point to the correct machine and SQL Server instance
-  sqlcmd /S %COMPUTERNAME%\{SqlInstance} /i RemoveDatabase.sql
-  sqlcmd /S %COMPUTERNAME%\{SqlInstance} /i CreateDatabase.sql
+
+sqlcmd /S %COMPUTERNAME%\{SqlInstance} /i RemoveDatabase.sql
+sqlcmd /S %COMPUTERNAME%\{SqlInstance} /i CreateDatabase.sql
+
 2. The Script installs the an new Database and Tablesee on a local isntance of SQL.
 3. In the Code, Navigate to the Constants and update the ComputerName and SqlServer constants to use the correct computer name and SQL Server instance.
 
