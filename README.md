@@ -1,3 +1,7 @@
+# Website
+If you want to view the website you can view it at: https://jasontruong1321.azurewebsites.net
+It is currently hosted on azure using CI/CD.
+
 # Instructions
 1. Navigate to the \dbscripts folder and update the 'run.bat' to point to the correct machine and SQL Server instance
 
