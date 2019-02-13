@@ -6,7 +6,7 @@ namespace WebApplication.Models
   public partial class DatabaseContext : DbContext
   {
     public DatabaseContext()
-        : base(string.Format(Constants.DbConnectString, Constants.ComputerName, Constants.SqlServer))
+        : base(string.Format(Constants.DbConnectString, Constants.ServerName))
     {
       Configuration.ProxyCreationEnabled = true;
       Configuration.LazyLoadingEnabled = true;

@@ -1,2 +1,1 @@
-sqlcmd /S %COMPUTERNAME%\SQLEXPRESS /i RemoveDatabase.sql
-sqlcmd /S %COMPUTERNAME%\SQLEXPRESS /i CreateDatabase.sql
+sqlcmd /S jtbackend.database.windows.net -d ProductionDatabase /i CreateDatabase.sql -U jasontruong1321 -P Throwaway12

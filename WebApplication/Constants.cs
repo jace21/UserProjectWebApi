@@ -31,20 +31,14 @@ namespace WebApplication
   public class Constants
   {
     /// <summary>
-    ///  SQL Server instance.
+    /// Server Name
     /// </summary>
-    public const string SqlServer = "SQLEXPRESS";
-
-    /// <summary>
-    /// Computer Name
-    /// </summary>
-    public static string ComputerName = Environment.MachineName;
+    public static string ServerName = "jtbackend.database.windows.net";
 
     /// <summary>
     /// DB connect string to connect to SQL Database.
     /// </summary>
     public const string DbConnectString =
-      @"data source={0}\{1};initial catalog=ProductionDatabase;" +
-      @"integrated security=True;MultipleActiveResultSets=True;App=EntityFramework";
+      "data source={0};initial catalog=ProductionDatabase;user id=jasontruong1321;password=Throwaway12;MultipleActiveResultSets=True;App=EntityFramework";
   }
 }
