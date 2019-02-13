@@ -1,5 +1,6 @@
 # Website
 If you want to view the website you can view it at: https://jasontruong1321.azurewebsites.net
+
 It is currently hosted on azure using CI/CD.
 
 # Instructions
