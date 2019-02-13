@@ -1,5 +1,17 @@
-:setvar DatabaseName "ProductionDatabase"
+:setvar TableName "UserProject"
 GO
 
-DROP  DATABASE [$(DatabaseName)];
+DROP TABLE [dbo].[$(TableName)]
+GO
+
+:setvar TableName "User"
+GO
+
+DROP TABLE [dbo].[$(TableName)]
+GO
+
+:setvar TableName "Project"
+GO
+
+DROP TABLE [dbo].[$(TableName)]
 GO

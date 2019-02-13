@@ -1,1 +1,2 @@
+sqlcmd /S jtbackend.database.windows.net -d ProductionDatabase /i RemoveDatabase.sql -U jasontruong1321 -P Throwaway12
 sqlcmd /S jtbackend.database.windows.net -d ProductionDatabase /i CreateDatabase.sql -U jasontruong1321 -P Throwaway12
